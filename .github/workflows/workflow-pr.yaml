@@ -4,7 +4,7 @@ jobs:
 
   qa:
     name: Quality check
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Set up Python
@@ -13,7 +13,7 @@ jobs:
           python-version: 3.12
       - name: Install poetry
         run: |
-          python -m pip install --upgrade pip
+          pip install -U pip
           pip install poetry
           poetry install
         env:
