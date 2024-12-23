@@ -27,9 +27,6 @@ jobs:
         run: python -m poetry install
 
       - name: Test
-        env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
         run: |
           poetry run python manage.py test
       - name: Wemake Python Stylguide
