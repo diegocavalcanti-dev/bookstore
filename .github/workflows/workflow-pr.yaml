@@ -30,7 +30,6 @@ jobs:
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
-          DJANGO_ALLOWED_HOSTS: "localhost 127.0.0.1"
         run: |
           poetry run python manage.py test
       - name: Wemake Python Stylguide
